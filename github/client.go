@@ -118,7 +118,6 @@ func (client *Client) CreatePullRequest(project *Project, params map[string]inte
 	if err != nil {
 		return
 	}
-
 	res, err := api.PostJSON(fmt.Sprintf("repos/%s/%s/pulls", project.Owner, project.Name), params)
 	if err = checkStatus(201, "creating pull request", res, err); err != nil {
 		if res != nil && res.StatusCode == 404 {

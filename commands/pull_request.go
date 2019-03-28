@@ -335,7 +335,6 @@ of text is the title and the rest is the description.`, fullBase, fullHead))
 			issueNum, _ := strconv.Atoi(flagPullRequestIssue)
 			params["issue"] = issueNum
 		}
-
 		startedAt := time.Now()
 		numRetries := 0
 		retryDelay := 2
